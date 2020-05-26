@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class OpenWeatherService {
   private url = "https://api.openweathermap.org/data/2.5/onecall";
