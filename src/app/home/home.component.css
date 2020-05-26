@@ -1,0 +1,61 @@
+.dayOfWeek{
+  font-size: 20px;
+}
+.monthDay{
+  opacity: .5;
+  font-size: 14px;
+}
+.mat-column-dayInfo{
+  flex: 0 0 40% !important;
+  white-space: unset !important;
+}
+.mat-column-icon{
+  flex: 0 0 40% !important;
+  white-space: unset !important;
+}
+
+
+.weatherDesc{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.dayTemp{
+  font-size: 16px;  
+  text-align: center;
+}
+.nightTemp{
+  opacity: .5;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 10px;  
+}
+.nightIcon{
+  opacity: .5;  
+  margin-left: 22px;
+  margin-bottom: 10px;  
+}
+.dayIcon{
+  margin-bottom: 10px;  
+}
+
+.selected-container{
+  display: inline-block;
+  width: 40%;
+  position: absolute;
+  margin: 20px;  
+}
+.table-container{
+  display:inline-block;
+  position: absolute;
+  right: 0;
+  width: 55%;
+  margin: 20px 30px 20px 20px;
+}
+.header{
+  margin:20px 20px 0px 20px;
+}
+
+.highlight{
+  background: lightgray;
+}

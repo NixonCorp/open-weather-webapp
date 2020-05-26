@@ -1,0 +1,32 @@
+.weatherDesc{
+  margin-left: 15px;
+  font-weight: bold;  
+}
+
+.weatherBlock{
+   display : flex;
+  align-items : center;
+  justify-content: center;
+}
+
+.rowTitle{
+  font-size: 16px;
+  opacity: .5;
+  width: 60%;
+}
+.rowValue {
+  margin-left: 30px;
+  font-size: 22px;
+}
+.nightTemp{
+  opacity: .5;
+  font-size: 18px;  
+  margin-left: 10px;  
+}
+.mat-card-header{
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  text-align: center;
+  font-size: 32px;  
+}

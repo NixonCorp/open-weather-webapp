@@ -1,0 +1,65 @@
+<mat-card class="header mat-elevation-z8"><h2>Weather in Moscow, RU</h2></mat-card>
+<div class="selected-container">
+<selected-weather-forecast
+[sunrise]="selectedForecast.sunrise"
+[sunset]="selectedForecast.sunset"
+[dayOfWeek]="selectedForecast.longDayOfWeek"
+[dayNumber]="selectedForecast.dayNumber"
+[month]="selectedForecast.month"
+[iconUrl]="selectedForecast.iconUrl"
+[weatherDesc]="selectedForecast.weatherDesc"
+[feelsLikeDayTemp]="selectedForecast.feelsLikeDayTemp"
+[feelsLikeNightTemp]="selectedForecast.feelsLikeNightTemp"
+[clouds]="selectedForecast.clouds"
+[windSpeed]="selectedForecast.windSpeed"
+[humidity]="selectedForecast.humidity"
+[pressure]="selectedForecast.pressure"
+></selected-weather-forecast>
+</div>
+<div class="table-container">
+<mat-table class="mat-elevation-z8" [dataSource]="data" multiTemplateDataRows>
+	<!-- Day Info Column -->
+	<ng-container matColumnDef="dayInfo">
+		<mat-cell *matCellDef="let element">
+			<div>
+				<div class="dayOfWeek">{{element.shortDayOfWeek}}</div>
+				<div class="monthDay">{{element.dayNumber}} {{element.month}}</div>
+			</div>
+		</mat-cell>
+	</ng-container>
+
+	<!-- Icon Column -->
+	<ng-container matColumnDef="icon">
+		<mat-cell *matCellDef="let element">
+			<div>
+				<div>
+					<img width="100" height="100" [src]="element.iconUrl">
+        </div>
+					<div class="weatherDesc">
+						{{element.weatherDesc}}
+					</div>
+				</div>
+		</mat-cell>
+	</ng-container>
+
+	<!-- Day Temprature Column -->
+	<ng-container matColumnDef="dayTemp">
+		<mat-cell *matCellDef="let element">
+			<div>
+				<div>
+					<i class="material-icons dayIcon">brightness_low</i>
+					<i class="material-icons nightIcon">brightness_3</i>
+				</div>
+				<div>
+					<span class="dayTemp">{{element.dayTemp < 0 ? element.dayTemp : '+'+element.dayTemp}} &deg;</span>
+					<span class="nightTemp">{{element.nightTemp < 0 ? element.nightTemp : '+'+element.nightTemp}} &deg;</span>
+				</div>
+			</div>
+		</mat-cell>
+	</ng-container>
+
+	<mat-row *matRowDef="let row; columns: displayedColumns; let i = dataIndex;" matRipple 
+  [ngClass]="{'highlight': selectedRowIndex == i}"
+  (click)="selectForecast(i)"></mat-row>
+</mat-table>
+</div>
