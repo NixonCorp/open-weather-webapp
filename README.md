@@ -1,3 +1,3 @@
 # open-weather-webapp
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/open-weather-webapp)
+[DEMO⚡️](https://open-weather-webapp.stackblitz.io/)
